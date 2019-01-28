@@ -28,7 +28,7 @@ class_anns = []
 non_class_anns = []
 
 for ann in data['annotations']:                           
-    if ann['id'] in classes:                              
+    if ann['category_id'] in classes:                              
         class_anns.append(ann)
     else:                                           
         non_class_anns.append(ann)
