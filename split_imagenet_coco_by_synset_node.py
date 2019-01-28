@@ -37,7 +37,7 @@ im_id_to_im = {im['id']:im for im in data['images']}
 class_ims = [im_id_to_im[ann['image_id']] for ann in class_anns]
 non_class_ims = [im_id_to_im[ann['image_id']] for ann in non_class_anns]
 
-class_cats = [cat for cat in data['categories'] if cat['id'] not in classes]
+class_cats = [cat for cat in data['categories'] if cat['id'] in classes]
 non_class_cats = [cat for cat in data['categories'] if cat['id'] not in classes]
 
 class_data = {'images':class_ims,'categories':class_cats,'annotations':class_anns}
