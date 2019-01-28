@@ -6,10 +6,10 @@ class_name = "animal"
 
 print('Getting full list of leaves under synset node '+class_wnid+'...')
 
-urllib.urlretrieve("http://image-net.org/api/text/wordnet.structure.hyponym?wnid="+class_wnid+"&full=1", "animal_synsets.txt") 
+urllib.urlretrieve("http://image-net.org/api/text/wordnet.structure.hyponym?wnid="+class_wnid+"&full=1", class_name+"_synsets.txt") 
 
 classes = []                                              
-with open('animal_synsets.txt','r') as f:                 
+with open(class_name+'_synsets.txt','r') as f:                 
     for line in f:             
         classes.append(line.strip().replace('-',''))
         
