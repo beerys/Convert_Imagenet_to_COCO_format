@@ -24,8 +24,8 @@ for s in synset_to_human_list:
 print('Loading ground truth .mat file...')
 meta_data = scipy.io.loadmat('ILSVRC2014_devkit/data/meta_clsloc.mat')
 
-wnid_to_label = {m[1][0]: m[0][0][0]-1 for m in meta_data['synsets'][0]}
-label_to_wnid = {m[0][0][0]-1: m[1][0] for m in meta_data['synsets'][0]}
+wnid_to_label = {m[1][0]: m[0][0][0] for m in meta_data['synsets'][0]}
+label_to_wnid = {m[0][0][0]: m[1][0] for m in meta_data['synsets'][0]}
 label_names_dict = {m[1][0]: m[2][0] for m in meta_data['synsets'][0]}
 
 print('Loading validation ground truth...') 
