@@ -15,7 +15,7 @@ with open(class_name+'_synsets.txt','r') as f:
         
 print('Loading the data to split...')
 
-data_to_split = 'ILSVRC2014/ILSVRC2014_train_classification.json'
+data_to_split = 'ILSVRC2014/ILSVRC2014_val_classification.json'
 data = json.load(open(data_to_split,'r'))
 
 #remove locally specific path if necessary
